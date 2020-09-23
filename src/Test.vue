@@ -1,13 +1,17 @@
 <template>
   <div>
-    {{ fo }}
+    {{ json }}
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import * as _ from 'lodash'
+import * as json from './data.json'
 
 export default {
-  props: ['foo', 'bar']
+  props: ['foo', 'bar'],
+  data() {
+    return { json }
+  }
 }
 </script>
